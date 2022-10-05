@@ -1,0 +1,46 @@
+@use  './variables.scss' as var;
+@use './reusables.scss' as reuse;
+
+.parent {
+    position: absolute;
+    top: 0;
+    // border: 2px solid #fff;
+
+    .bg {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+    }
+
+    .content {
+        position: fixed;
+        inset: 0px;
+        top: -80px;
+        margin: auto;
+        color: var.$white;
+        // border: 1px solid #fff;
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-weight: 600;
+        }
+        span {
+            font-size: var.$space-64px;
+            font-weight: 700;
+            color: var.$mainOrange;
+        }
+        &__info {
+            width: 450px;
+            text-align: center;
+            line-height: var.$space-20px;
+        }
+        .heroBtn {
+            @include reuse.btnBigOrange();
+            margin-top: var.$space-20px;
+        }
+    }
+}
