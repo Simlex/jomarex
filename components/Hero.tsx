@@ -13,10 +13,10 @@ export default function Hero(props: IHeroProps) {
   return (
     <div className={style.parent}>
       <div className={style.bg}>
-        <Image src={HeroBg} />
+        <Image src={HeroBg} alt='Background image' />
       </div>
       <div className={style.content}>
-        <h2>Let's be your</h2>
+        <h2>Let&apos;s be your</h2>
         <span>Baker</span>
         <p className={style.content__info}>Get the best catering services for all your yummie food and for all events.</p>
         <button className={style.heroBtn}>

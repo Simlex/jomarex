@@ -13,7 +13,7 @@ const Navbar: FunctionComponent<NavbarProps> = (): ReactElement => {
     return (
         <div className={style.container}>
             <div className={style.container__logo}>
-                <Image src={Logo} />
+                <Image src={Logo} alt='Logo' />
             </div>
             <div className={style.container__navLinks}>
                 <ul>
