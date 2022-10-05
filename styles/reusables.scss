@@ -1,0 +1,22 @@
+@use './variables.scss' as var;
+
+@mixin btnBigOrange {
+    background-color: var.$mainOrange;
+    color: var.$white;
+    border-radius: var.$space-8px;
+    padding: var.$space-16px var.$space-24px;
+    display: flex;
+    align-items: center;
+    gap: var.$space-4px;
+    border: none;
+    cursor: pointer;
+    font-size: var.$space-16px;
+    text-transform: uppercase;
+    &__icon {
+        display: inline-flex;
+        svg {
+            width: var.$space-24px;
+            height: var.$space-24px;
+        }
+    }
+}
