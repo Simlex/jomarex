@@ -13,7 +13,7 @@ const Whatsapp: FunctionComponent<WhatsappProps> = (): ReactElement => {
     return (
         <div className={style.wParent}>
             <div className={style.whatsappIcon}>
-                <Image src={whatsapp} />
+                <Image src={whatsapp} alt='Whatsapp Icon' />
             </div>
         </div>
     );

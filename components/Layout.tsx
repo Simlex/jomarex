@@ -1,4 +1,5 @@
 import { FunctionComponent, ReactElement, ReactNode } from "react";
+import BottomNav from "./BottomNav";
 import Navbar from "./Navbar";
 
 interface LayoutProps {
@@ -10,6 +11,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }): ReactElement => {
         <>
             <Navbar />
             {children}
+            <BottomNav />
         </>
     );
 }
