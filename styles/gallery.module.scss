@@ -7,6 +7,54 @@
     h2 {
         @include reuse.h2();
     }
+    .filter {
+        position: relative;
+        margin-left: auto;
+        .filterBox {
+            display: flex;
+            align-items: center;
+            gap: var.$space-4px;
+            padding: var.$space-12px var.$space-24px;
+            background-color: lighten($color: var.$l3-Grey, $amount: 13%);
+            width: fit-content;
+            border-radius: var.$space-12px;
+            margin-left: auto;
+            cursor: pointer;
+            &:hover {
+                color: var.$mainOrange;
+            }
+        }
+        .dropdownBox {
+            position: absolute;
+            top: 44px;
+            right: 0;
+            z-index: 1;
+            opacity: 1;
+            padding: var.$space-16px;
+            background-color: var.$white;
+            display: flex;
+            flex-direction: column;
+            gap: var.$space-4px;
+            border-radius: var.$space-16px;
+            animation: slideIn 400ms cubic-bezier(1,0,0,1.2);
+            @keyframes slideIn {
+                0% {
+                    top: 0px;
+                    opacity: 0;
+                }
+            }
+            p {
+            padding: var.$space-4px var.$space-16px;
+            text-align: center;
+            border-radius: var.$space-8px;
+            cursor: pointer;
+            &:hover {
+                background-color: lighten($color: var.$l3-Grey, $amount: 13%);
+                color: var.$mainOrange;
+            }
+            }
+        }
+    }
     .galleryBox {
         margin-top: var.$space-64px;
         // border: 1px solid;
@@ -28,7 +76,7 @@
             inset: 0px;
             width: 100%;
             height: 100%;
-            content: '';
+            content: "";
             opacity: 0.4;
         }
         &:hover {
@@ -39,5 +87,25 @@
                 opacity: 0;
             }
         }
+    }
+}
+
+.mParent {
+    @extend .parent;
+    margin: 0 var.$space-24px;
+    max-width: 500px;
+    @media screen and (min-width: 500px) {
+        margin: 0 auto;
+    }
+    
+    .mGalleryBox{
+        display: flex;
+        flex-direction: column;
+        gap: var.$space-16px;
+        margin-top: var.$space-24px;
+    }
+    .galleryItem {
+        grid-area: span 1;
+        border-radius: var.$space-32px;
     }
 }

@@ -1,5 +1,5 @@
-@use  './variables.scss' as var;
-@use './reusables.scss' as reuse;
+@use "./variables.scss" as var;
+@use "./reusables.scss" as reuse;
 
 .parent {
     padding: var.$space-48px var.$space-64px;
@@ -14,9 +14,19 @@
         @include reuse.h2();
     }
     .services {
-    display: flex;
-    gap: var.$space-16px;
+        display: flex;
+        gap: var.$space-16px;
     }
+    .mServices {
+        display: flex;
+        flex-direction: column;
+        gap: var.$space-16px;
+    }
+}
+.mParent {
+    @extend .parent;
+    padding: var.$space-24px var.$space-24px;
+    margin: 0px auto;
 }
 
 .cardContainer {
@@ -66,6 +76,33 @@
         }
         .btn {
             @include reuse.bigGreyHover();
+        }
+    }
+}
+
+.mCardContainer {
+    @extend .cardContainer;
+    width: 100%;
+    max-width: 500px;
+
+    .cardContainer__content {
+        // border: 2px solid;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var.$space-24px;
+        margin-bottom: var.$space-24px;
+        overflow: hidden;
+        .mImage {
+            border-radius: var.$space-12px;
+            overflow: hidden;
+            display: inline-flex;
+            &:hover {
+                img {
+                    scale: 1.2;
+                }
+            }
         }
     }
 }

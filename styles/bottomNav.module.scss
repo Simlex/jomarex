@@ -1,0 +1,15 @@
+@use "./variables.scss" as var;
+@use "./reusables.scss" as reuse;
+
+.container {
+    width: 400px;
+    height: 100px;
+    position: relative;
+    .box {
+        background-color: var.$white;
+        position: fixed;
+        bottom: 3%;
+        // left: 0%;
+        margin: 0px auto;
+    }
+}
