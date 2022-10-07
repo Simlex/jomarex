@@ -1,0 +1,71 @@
+@use  './variables.scss' as var;
+@use './reusables.scss' as reuse;
+
+.parent {
+    padding: var.$space-48px var.$space-64px;
+    width: fit-content;
+    margin: 0px var.$space-64px;
+    top: -20px;
+    // position: absolute;
+    translate: 0px -60px;
+    background-color: var.$white;
+    border-radius: var.$space-32px;
+    h2 {
+        @include reuse.h2();
+    }
+    .services {
+    display: flex;
+    gap: var.$space-16px;
+    }
+}
+
+.cardContainer {
+    padding: var.$space-16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var.$white;
+    max-width: 332px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: var.$space-24px;
+    cursor: pointer;
+    h2 {
+        font-size: var.$space-24px;
+        margin-bottom: var.$space-16px;
+        font-weight: 550;
+    }
+    &__content {
+        width: 100%;
+        border: 1px solid var.$d1-Grey;
+        border-radius: var.$space-24px;
+        margin-bottom: var.$space-24px;
+        overflow: hidden;
+        .image {
+            height: 170px;
+            border-radius: var.$space-12px;
+            overflow: hidden;
+        }
+        p {
+            text-align: center;
+            padding: 16px 24px;
+            padding-bottom: 24px;
+        }
+    }
+    .btn {
+        @include reuse.bigGreyInitial();
+    }
+    &:hover {
+        box-shadow: none;
+        .cardContainer__content {
+            border: 1px solid var.$mainOrange;
+        }
+        .image {
+            img {
+                scale: 1.2;
+            }
+        }
+        .btn {
+            @include reuse.bigGreyHover();
+        }
+    }
+}

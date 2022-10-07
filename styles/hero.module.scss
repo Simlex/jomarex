@@ -1,46 +1,52 @@
-@use  './variables.scss' as var;
-@use './reusables.scss' as reuse;
+@use "./variables.scss" as var;
+@use "./reusables.scss" as reuse;
 
 .parent {
-    position: absolute;
-    top: 0;
-    // border: 2px solid #fff;
-
-    .bg {
-        position: absolute;
-        top: 0;
-        width: 100vw;
-    }
-
-    .content {
-        position: fixed;
-        inset: 0px;
-        top: -80px;
-        margin: auto;
-        color: var.$white;
-        // border: 1px solid #fff;
-        width: fit-content;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        h2 {
-            font-weight: 600;
+    position: relative;
+    border: 2px solid #000;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    .container {
+        .bg {
+            position: absolute;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            background-image: url('../public/heroBg.jpg');
+            background-position: center;
+            background-size: cover;
         }
-        span {
-            font-size: var.$space-64px;
-            font-weight: 700;
-            color: var.$mainOrange;
-        }
-        &__info {
-            width: 450px;
-            text-align: center;
-            line-height: var.$space-20px;
-        }
-        .heroBtn {
-            @include reuse.btnBigOrange();
-            margin-top: var.$space-20px;
+        .content {
+            position: absolute;
+            inset: 0px;
+            top: 0%;
+            margin: auto;
+            color: var.$white;
+            // border: 1px solid #fff;
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-weight: 600;
+            }
+            span {
+                font-size: var.$space-64px;
+                font-weight: 700;
+                color: var.$mainOrange;
+            }
+            &__info {
+                width: 450px;
+                text-align: center;
+                line-height: var.$space-20px;
+            }
+            .heroBtn {
+                @include reuse.btnBigOrange();
+                margin-top: var.$space-20px;
+            }
         }
     }
 }
