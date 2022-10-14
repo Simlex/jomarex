@@ -14,8 +14,9 @@
         @include reuse.h2();
     }
     .services {
+        // border: 1px solid;
         display: flex;
-        gap: var.$space-16px;
+        gap: var.$space-24px;
     }
     .mServices {
         display: flex;
@@ -66,6 +67,9 @@
     }
     &:hover {
         box-shadow: none;
+        h2 {
+            color: var.$mainOrange;
+        }
         .cardContainer__content {
             border: 1px solid var.$mainOrange;
         }

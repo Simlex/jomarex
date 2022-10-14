@@ -4,6 +4,7 @@ import * as React from 'react';
 import style from '../../styles/card.module.scss';
 
 import cateringImg from '../../public/cardImages/catering.jpg';
+import Link from 'next/link';
 
 export interface ICardProps {
     onMobile: any;
@@ -19,9 +20,11 @@ export default function Card(props: ICardProps) {
                 </div>
                 <p>Get the best catering services for all your events</p>
             </div>
-            <div className={style.btn}>
-                Explore
-            </div>
+            <Link href='/services'>
+                <div className={style.btn}>
+                    Explore
+                </div>
+            </Link>
         </div>
     );
 }
