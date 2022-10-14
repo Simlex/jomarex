@@ -136,7 +136,7 @@ export default function ServicesContainer(props: IServicesContainerProps) {
                                     {
                                         galleryImgs.map((each, index) => {
                                             return (
-                                                <div className={style.carouselImg}>
+                                                <div className={style.carouselImg} key={index}>
                                                     <Image src={gallery2} />
                                                 </div>
                                             )
