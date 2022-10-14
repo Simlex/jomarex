@@ -48,18 +48,20 @@ const Navbar: FunctionComponent<NavbarProps> = (): ReactElement => {
             {
                 !onMobile && (
                     <div className={`${style.container} ${scrollY > 440 && style.containerFill}`}>
-                        <div className={style.container__logo}>
-                            {
-                                scrollY > 440 && (
-                                    <Image src={LogoDark} alt='Logo' />
-                                )
-                            }
-                            {
-                                scrollY === 440 || scrollY < 440 && (
-                                    <Image src={Logo} alt='Logo' />
-                                )
-                            }
-                        </div>
+                        <Link href='/'>
+                            <div className={style.container__logo}>
+                                {
+                                    scrollY > 440 && (
+                                        <Image src={LogoDark} alt='Logo' />
+                                    )
+                                }
+                                {
+                                    scrollY === 440 || scrollY < 440 && (
+                                        <Image src={Logo} alt='Logo' />
+                                    )
+                                }
+                            </div>
+                        </Link>
                         <div className={style.container__navLinks}>
                             <ul>
                                 <Link href='/'>
@@ -68,7 +70,7 @@ const Navbar: FunctionComponent<NavbarProps> = (): ReactElement => {
                                 <Link href='/'>
                                     <li className={style.navLink}>About Us</li>
                                 </Link>
-                                <Link href='/'>
+                                <Link href='/services'>
                                     <li className={style.navLink}>Our Services</li>
                                 </Link>
                                 <Link href='/'>

@@ -14,8 +14,8 @@ export default function Hero(props: IHeroProps) {
 
   const [keyword, setKeyword] = useState(false);
   useEffect(() => {
-      window.setInterval(() => setKeyword(!keyword), 4000);
-  })
+      window.setTimeout(() => setKeyword(!keyword), 4000);
+  }, [keyword])
   // if (typeof window !== "undefined" && keyword === 'Caterer') {
   //   window.setInterval(() => setKeyword('Baker'), 4000);
   // }
@@ -29,6 +29,8 @@ export default function Hero(props: IHeroProps) {
         <div className={style.content}>
           <h2>Let&apos;s be your</h2>
           <span>{keyword ? 'Baker' : 'Caterer'}</span>
+          {/* <span>{keyword}</span> */}
+          {/* <span>Baker</span> */}
           <p className={style.content__info}>Get the best catering services for all your yummie food and for all events.</p>
           <button className={style.heroBtn}>
             <div className={style.heroBtn__icon}>

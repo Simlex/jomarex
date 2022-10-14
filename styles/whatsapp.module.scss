@@ -12,5 +12,9 @@
     position: fixed;
     bottom: 5%;
     right: 3%;
+    @media screen and (max-width: 768px) {
+      bottom: 10%;
+      display: none;
+    }
   }
 }

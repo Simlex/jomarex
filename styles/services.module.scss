@@ -1,0 +1,250 @@
+@use "./variables.scss" as var;
+@use "./reusables.scss" as reuse;
+
+.servicesGroup {
+    padding: var.$space-48px var.$space-64px;
+    // position: relative;
+    @media screen and (max-width: 768px) {
+        padding: var.$space-48px var.$space-24px;
+    }
+
+    &__top {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: var.$space-80px;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            li {
+                list-style: none;
+                font-size: var.$space-24px;
+                font-weight: 600;
+                color: var.$mainOrange;
+                position: relative;
+                cursor: pointer;
+            }
+            .selected {
+                &::after {
+                    width: 100%;
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    background-color: var.$mainOrange;
+                    transition: all 300ms ease;
+                    height: 4px;
+                    bottom: -6px;
+                    opacity: 1;
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            // padding: 0px 24px;
+        }
+    }
+
+    &__picInfo {
+        margin-bottom: var.$space-48px;
+        display: grid;
+        gap: var.$space-48px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "fi fi fi fi  fi fi se se  se se se se"
+            "th th th th  th th fo fo  fo fo fo fo"
+            "ff ff ff ff  ff ff sx sx  sx sx sx sx";
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-areas:
+                "fi fi fi fi  fi fi"
+                "se se  se se se se"
+                "th th th th  th th"
+                "fo fo  fo fo fo fo"
+                "ff ff ff ff  ff ff"
+                "sx sx  sx sx sx sx";
+        }
+
+        .eachSubService {
+            display: flex;
+            // border: 1px solid;
+            height: 174px;
+            @media screen and (max-width: 768px) {
+                height: auto;
+                min-height: 174px;
+            }
+            &:hover {
+                box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+            }
+            &__note {
+                // border: 1px solid;
+                padding: var.$space-24px;
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-between;
+                gap: var.$space-12px;
+                min-width: 358px;
+                // font-size: var.$space-16px - 2;
+                @media screen and (max-width: 768px) {
+                    // width: 100%;
+                    min-width: 260px;
+                    width: 260px;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                span {
+                    font-size: var.$space-16px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: var.$mainOrange;
+                }
+            }
+            &__img {
+                // border: 1px solid;
+                display: inline-flex;
+            }
+        }
+
+        .first {
+            grid-area: fi;
+        }
+        .second {
+            grid-area: se;
+        }
+        .third {
+            grid-area: th;
+        }
+        .fourth {
+            grid-area: fo;
+        }
+        .fifth {
+            grid-area: ff;
+        }
+        .sixth {
+            grid-area: sx;
+        }
+    }
+
+    &__learning {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: "le le le le  ri ri ri ri";
+        align-items: center;
+        margin-bottom: var.$space-56px;
+        @media screen and (max-width: 768px) {
+            gap: var.$space-64px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: 
+            "le le le le" 
+            "ri ri ri ri";
+        }
+
+        .learningContent {
+            grid-area: le;
+
+            h2 {
+                width: 400px;
+                margin-bottom: var.$space-16px;
+                font-size: var.$space-32px;
+                span {
+                    color: var.$mainOrange;
+                }
+                @media screen and (max-width: 500px) {
+                    width: auto;
+                }
+            }
+            p {
+                width: 460px;
+                font-size: var.$space-16px;
+                line-height: 26px;
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
+            }
+            &__cta {
+                @include reuse.btnBigOrange();
+                width: fit-content;
+                margin-top: var.$space-32px;
+            }
+        }
+        .learningImgs {
+            grid-area: ri;
+            width: 550px;
+            height: fit-content;
+            display: flex;
+            gap: 24px;
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
+            .img1,
+            .img2 {
+                border-radius: 24px;
+                overflow: hidden;
+                height: fit-content;
+                display: inline-flex;
+            }
+            .img1 {
+                margin-top: 64px;
+            }
+        }
+    }
+
+    &__gallery {
+        // border: 1px solid #000;
+        width: 100%;
+        height: fit-content;
+        margin: var.$space-56px 0px;
+        margin-top: var.$space-80px;
+        overflow: hidden;
+        .scrollContainer {
+            overflow-x: scroll;
+            margin-bottom: var.$space-24px;
+            .carouselImgGroup {
+                display: inline-flex;
+                gap: 12px;
+
+                .carouselImg {
+                    display: inline-flex;
+                    width: 300px;
+                    border-radius: var.$space-20px;
+                    overflow: hidden;
+                }
+            }
+        }
+        a {
+            margin: 0 auto;
+            width: fit-content;
+            display: block;
+            &:hover {
+                color: var.$mainOrange;
+            }
+        }
+    }
+
+    &__note {
+        padding: var.$space-32px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: var.$space-32px;
+        line-height: 24px;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 430px) {
+            font-size: var.$space-12px;
+            line-height: var.$space-16px;
+        }
+    }
+
+    &__cta {
+        @include reuse.btnBigOrange();
+        width: fit-content;
+        margin: 0 auto;
+        .ctaImage {
+            width: var.$space-32px;
+            height: var.$space-32px;
+        }
+    }
+}

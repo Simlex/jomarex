@@ -2,14 +2,45 @@
 @use "./reusables.scss" as reuse;
 
 .container {
-    width: 400px;
-    height: 100px;
-    position: relative;
+    width: 100vw;
+    // height: 100vh;
+    // position: fixed;
+    // background: none;
+    // top: 0;
+    border: 20px solid #000;
     .box {
         background-color: var.$white;
+        // border: 1px solid #000;
+        border-radius: var.$space-24px;
         position: fixed;
-        bottom: 3%;
-        // left: 0%;
-        margin: 0px auto;
+        bottom: 2%;
+        left: 0%;
+        right: 0px;
+        margin: 0 auto;
+        width: 380px;
+        width: 90%;
+        height: 72px;
+        padding: var.$space-16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (min-width: 500px) {
+            width: 500px;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: var.$space-12px;
+            color: var.$l1-Grey;
+            &:hover, &:focus {
+                color: var.$mainOrange;
+            }
+            svg {
+                color: var.$d2-Grey;
+                width: var.$space-16px + 4;
+                height: var.$space-16px + 4;
+            }
+        }
     }
 }
