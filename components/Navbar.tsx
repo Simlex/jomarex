@@ -67,7 +67,7 @@ const Navbar: FunctionComponent<NavbarProps> = (): ReactElement => {
                                 <Link href='/'>
                                     <li className={style.navLink}>Home</li>
                                 </Link>
-                                <Link href='/'>
+                                <Link href='/about'>
                                     <li className={style.navLink}>About Us</li>
                                 </Link>
                                 <Link href='/services'>

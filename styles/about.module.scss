@@ -1,0 +1,68 @@
+@use "./variables.scss" as var;
+@use "./reusables.scss" as reuse;
+
+@mixin h2 {
+    color: var.$d2-Grey;
+    font-size: var.$space-32px;
+    margin-bottom: var.$space-24px;
+    span {
+        color: var.$mainOrange;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: var.$space-24px;
+    }
+}
+
+.infoSection {
+    padding: var.$space-48px var.$space-64px;
+    // width: fit-content;
+    // margin: 0px var.$space-64px;
+    translate: 0px -60px;
+    background-color: var.$white;
+    @media screen and (max-width: 768px) {
+        padding: var.$space-48px var.$space-24px;
+    }
+
+    &__story {
+        margin-bottom: var.$space-64px;
+        h2 {
+            @include h2();
+        }
+        p {
+            font-size: var.$space-16px;
+            line-height: 16px + 6;
+            width: 90%;
+            @media screen and (max-width: 768px) {
+                widows: 100%;
+            }
+        }
+    }
+
+    &__works {
+        margin-bottom: var.$space-48px;
+        h2 {
+            @include h2();
+        }
+        .worksImgs {
+            display: flex;
+            gap: var.$space-24px;
+            &__img {
+                display: inline-flex;
+                border-radius: var.$space-24px;
+                overflow: hidden;
+            }
+            @media screen and (max-width: 768px) {
+                gap: var.$space-16px;
+                &__img {
+                    border-radius: var.$space-16px;
+                }
+            }
+        }
+    }
+
+    .viewBtn {
+        @include reuse.btnBigOrange();
+        width: fit-content;
+        margin: 0 auto;
+    }
+}

@@ -69,6 +69,9 @@
             display: flex;
             // border: 1px solid;
             height: 174px;
+            border-radius: 24px;
+            overflow: hidden;
+            border-left: 3px solid var.$mainOrange;
             @media screen and (max-width: 768px) {
                 height: auto;
                 min-height: 174px;
@@ -87,8 +90,8 @@
                 // font-size: var.$space-16px - 2;
                 @media screen and (max-width: 768px) {
                     // width: 100%;
-                    min-width: 260px;
-                    width: 260px;
+                    min-width: auto;
+                    width: 100%;
                     font-size: 14px;
                     line-height: 16px;
                 }
@@ -102,6 +105,11 @@
             &__img {
                 // border: 1px solid;
                 display: inline-flex;
+                border-radius: 24px;
+                overflow: hidden;
+                @media screen and (max-width: 768px) {
+                    width: 260px;
+                }
             }
         }
 
