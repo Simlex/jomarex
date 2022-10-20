@@ -43,5 +43,11 @@
                 height: var.$space-16px + 4;
             }
         }
+        .linkActive {
+            color: var.$mainOrange;
+            svg {
+                color: var.$mainOrange;
+            }
+        }
     }
 }
