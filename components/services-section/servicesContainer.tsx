@@ -116,10 +116,12 @@ export default function ServicesContainer(props: IServicesContainerProps) {
                                     to learn a new cuisine. All our classes are taught by an expert
                                     chef who is well experienced in teaching people how to cook.
                                 </p>
-                                <div className={style.learningContent__cta}>
-                                    <BiBookHeart />
-                                    Enroll Now
-                                </div>
+                                <Link href='https://wa.me/2348176458082'>
+                                    <div className={style.learningContent__cta}>
+                                        <BiBookHeart />
+                                        Enroll Now
+                                    </div>
+                                </Link>
                             </div>
                             <div className={style.learningImgs}>
                                 <div className={style.img1}>
@@ -152,12 +154,14 @@ export default function ServicesContainer(props: IServicesContainerProps) {
                 )
             }
 
-            <div className={style.servicesGroup__cta}>
-                Connect with us
-                <div className={style.ctaImage}>
-                    <Image src={whatsapp} />
+            <Link href='https://wa.me/2348176458082'>
+                <div className={style.servicesGroup__cta}>
+                    Connect with us
+                    <div className={style.ctaImage}>
+                        <Image src={whatsapp} />
+                    </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 }

@@ -17,7 +17,7 @@ export default function Gallery(props: IGalleryProps) {
     return (
         <div className={props.onMobile ? style.mParent : style.parent}>
             <h2>Our Mouth-Watering Gallery</h2>
-            <div className={style.filter}>
+            {/* <div className={style.filter}>
                 <div className={style.filterBox} onClick={() => { setDropdownVisible(!dropdownVisible) }}>
                     <p>Filter</p>
                     <BsFilterCircle />
@@ -31,7 +31,7 @@ export default function Gallery(props: IGalleryProps) {
                         </div>
                     )
                 }
-            </div>
+            </div> */}
             <div className={props.onMobile ? style.mGalleryBox : style.galleryBox}>
                 <div className={`${style.galleryItem} ${style.img1}`}>
                     <Image src={gallery1} alt='Food image' />

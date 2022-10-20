@@ -7,6 +7,8 @@ import { GoHome } from 'react-icons/go';
 import { TbMessageCircle } from 'react-icons/tb';
 import { MdOutlineContactSupport, MdOutlineFastfood } from 'react-icons/md';
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 interface BottomNavProps {
 
 }
@@ -15,6 +17,10 @@ const BottomNav: FunctionComponent<BottomNavProps> = (): ReactElement => {
 
     const onMoblie = useResponsive();
 
+    const route = useRouter();
+    const currentRoute = route.pathname;
+    console.log(currentRoute);
+
     return (
         <>
             {
@@ -22,25 +28,25 @@ const BottomNav: FunctionComponent<BottomNavProps> = (): ReactElement => {
                     <div className={style.container}>
                         <div className={style.box}>
                             <Link href='/'>
-                                <div className={style.links}>
+                                <div className={currentRoute === '/' ? `${style.links} ${style.linkActive}` : style.links}>
                                     <GoHome />
                                     Home
                                 </div>
                             </Link>
                             <Link href='/about'>
-                                <div className={style.links}>
+                                <div className={currentRoute === '/about' ? `${style.links} ${style.linkActive}` : style.links}>
                                     <MdOutlineContactSupport />
                                     About us
                                 </div>
                             </Link>
                             <Link href='/services'>
-                                <div className={style.links}>
+                                <div className={currentRoute === '/services' ? `${style.links} ${style.linkActive}` : style.links}>
                                     <MdOutlineFastfood />
                                     Our services
                                 </div>
                             </Link>
                             <Link href='/contact'>
-                                <div className={style.links}>
+                                <div className={currentRoute === '/contact' ? `${style.links} ${style.linkActive}` : style.links}>
                                     <TbMessageCircle />
                                     Contact us
                                 </div>
