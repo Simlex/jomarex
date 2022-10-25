@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import * as React from 'react';
-import ContactArea from '../components/contact-section/contactArea';
+import ContactArea from '../components/contact-section/ContactArea';
 import Hero from '../components/Hero';
 import style from '../styles/contact.module.scss';
 
