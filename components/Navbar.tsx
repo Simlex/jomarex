@@ -73,7 +73,7 @@ const Navbar: FunctionComponent<NavbarProps> = (): ReactElement => {
                                 <Link href='/services'>
                                     <li className={style.navLink}>Our Services</li>
                                 </Link>
-                                <Link href='/'>
+                                <Link href='/contact'>
                                     <li className={style.navLink}>Contact Us</li>
                                 </Link>
                             </ul>
