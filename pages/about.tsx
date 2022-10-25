@@ -22,23 +22,42 @@ export default function About(props: IAboutProps) {
 
             <div className={style.infoSection}>
                 <div className={style.infoSection__story}>
-                    <h2>Our <span>Story</span> and <span>Mission</span></h2>
-                    <p>Yumies was founded in 2021, and its main focus is to bring joy
-                        into the smile of people when we offer our services. we offer
-                        different services such was baking, catering and we also teach
-                        confectionaries</p>
+                    <h2>Our <span>Story</span></h2>
+                    <p>JOMAREX Catering  Services is situated at  Salvation Crescent Isokan Estate, Ori Okuta Ikorodu  Lagos.
+                        We are into <span>Baking, Cooking, Training</span> and <span>selling baking materials</span>
+                        <br />
+                        <br />
+                        For more than 20 years of catering events, we have been blessed to be a part of weddings, debuts, corporate events, and private celebrations. These events have given us valuable insights and ideas that inspire our continuous effort to provide better and improved services to a wider set of clients. But what really matters to us is our relationship with our customers.
+                        {/* We start baking mart  7years ago. */}
+                        <br />
+                        <br />
+                        Our guiding philosophy has been to consistently provide clients with high quality food at competitive prices and to provide a service that is efficient, friendly, and courteous.
+                        Our goal is to give you a priceless and worry-free planning that is as enjoyable as the event itself.
+                        <br />
+                        <br />
+                        We consider ourselves not only a caterer, but also a partner that will assist you during the process of conceptualizing, budgeting, planning, and on the day of your event.</p>
+                </div>
+                <div className={style.infoSection__story}>
+                    <h2>Our <span>Vision</span></h2>
+                    <p>To build an outstanding reputation that we exceed in every service through our dedication to the success of our customers, important occasions and creating memorable events.
+                        To give back and contribute to our local community and charity groups to train  and help as much as we can by impacting knowledge to them.</p>
+                </div>
+                <div className={style.infoSection__story}>
+                    <h2>Our <span>Mission</span></h2>
+                    <p>Providing an impeccable service, quality delicious foods, quality tools,  and a passionate team. To give an impression that deliver a friendly and professional experience 
+                        that brings our customers visions to life and creates powerful memories.</p>
                 </div>
                 <div className={style.infoSection__works}>
                     <h2>Our works and events</h2>
                     <div className={style.worksImgs}>
                         <div className={style.worksImgs__img}>
-                            <Image src={workImg1} alt='Woman working'/>
+                            <Image src={workImg1} alt='Woman working' />
                         </div>
                         <div className={style.worksImgs__img}>
-                            <Image src={workImg1} alt='Woman working'/>
+                            <Image src={workImg1} alt='Woman working' />
                         </div>
                         <div className={style.worksImgs__img}>
-                            <Image src={workImg1} alt='Woman working'/>
+                            <Image src={workImg1} alt='Woman working' />
                         </div>
                     </div>
                 </div>

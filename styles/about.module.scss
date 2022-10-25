@@ -21,6 +21,7 @@
     background-color: var.$white;
     @media screen and (max-width: 768px) {
         padding: var.$space-48px var.$space-24px;
+        border: 1px solid;
     }
 
     &__story {
@@ -34,6 +35,9 @@
             width: 90%;
             @media screen and (max-width: 768px) {
                 widows: 100%;
+            }
+            span {
+                color: darken($color: var.$mainOrange, $amount: 10%);
             }
         }
     }
