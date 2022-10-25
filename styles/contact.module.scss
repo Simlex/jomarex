@@ -1,0 +1,96 @@
+@use "./variables.scss" as var;
+@use "./reusables.scss" as reuse;
+
+.sectionContainer {
+    padding: var.$space-48px var.$space-64px;
+    display: flex;
+    gap: var.$space-32px;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    &__contact {
+        width: 60%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+        h1,
+        h2 {
+            margin-bottom: var.$space-16px;
+        }
+        p {
+            width: 400px;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+        .whatsappBox {
+            margin: var.$space-32px 0;
+            display: flex;
+            align-items: center;
+            // border: 1px solid;
+            width: fit-content;
+            padding: var.$space-12px var.$space-24px;
+            border-radius: var.$space-16px;
+            background-color: rgba(#30b346, 0.1);
+            cursor: pointer;
+            &__img {
+                height: var.$space-48px;
+                width: var.$space-48px;
+                margin-right: var.$space-12px;
+                @media screen and (max-width: 768px) {
+                    height: var.$space-32px;
+                    width: var.$space-32px;
+                }
+            }
+            p {
+                font-size: var.$space-16px;
+                font-weight: 500;
+                width: fit-content;
+                margin-right: var.$space-12px;
+                @media screen and (max-width: 768px) {
+                    font-size: var.$space-12px;
+                }
+            }
+            svg {
+                color: #30b346;
+            }
+        }
+    }
+
+    &__info {
+        background-color: var.$d2-Grey;
+        color: var.$white;
+        padding: var.$space-32px;
+        width: 40%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: var.$space-24px;
+        }
+
+        ul {
+            margin-top: var.$space-32px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: var.$space-24px;
+            @media screen and (max-width: 768px) {
+                gap: var.$space-12px;
+            }
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap:  var.$space-8px;
+                @media screen and (max-width: 768px) {
+                    font-size: var.$space-12px;
+                }
+                svg {
+                    width: var.$space-24px;
+                    height: var.$space-24px;
+                    color: var.$l1-Grey;
+                }
+            }
+        }
+    }
+}
